@@ -42,8 +42,12 @@ export default function HomeScScreen({ navigation }) {
                         username: post.username,
                         likeCount: post.like_count, 
                     }));
-                    setPosts(loadedPosts);
-
+    
+                    // Vérifier si les posts ont changé avant de mettre à jour l'état
+                    if (JSON.stringify(loadedPosts) !== JSON.stringify(posts)) {
+                        setPosts(loadedPosts);
+                    }
+    
                     // Charger les posts aimés après le chargement des posts
                     await fetchLikedPosts();
                 } else {
@@ -54,10 +58,18 @@ export default function HomeScScreen({ navigation }) {
                 Alert.alert('Erreur', 'Erreur lors du chargement des posts ou des likes.');
             }
         };
-
+    
+        // Charger l'image de profil une fois au montage du composant
         loadProfileImage();
-        loadPostsAndLikes(); // Récupérer les posts et les posts aimés lors du montage du composant
-    }, []);
+    
+        // Charger les posts et vérifier les mises à jour toutes les secondes
+        const interval = setInterval(() => {
+            loadPostsAndLikes();
+        }, 3500); // 1 seconde
+    
+        // Nettoyer l'intervalle à la destruction du composant
+        return () => clearInterval(interval);
+    }, [posts]);
 
     const fetchLikedPosts = async () => {
         try {

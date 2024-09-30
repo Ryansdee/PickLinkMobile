@@ -34,7 +34,7 @@ const MessagesScreen = ({ navigation }) => {
         if (storedEmail) {
           setEmail(storedEmail);  // Stocker l'email de l'utilisateur connecté
           // Appel API pour récupérer les conversations
-          const response = await fetch(`http://127.0.0.1/api.php?action=getConversations&email=${storedEmail}`);
+          const response = await fetch(`http://192.168.68.107/api.php?action=getConversations&email=${storedEmail}`);
           const data = await response.json();
           if (data && data.conversations) {
             setConversations(data.conversations); // Les conversations récupérées
