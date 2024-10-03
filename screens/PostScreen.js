@@ -23,7 +23,7 @@ const App = () => {
     formData.append('user_id', 1); // Remplacez par l'ID utilisateur
 
     try {
-      const response = await fetch('http://192.168.68.107/upload.php?action=uploadPost', {
+      const response = await fetch('http://192.168.68.107/api/upload.php?action=uploadPost', {
         method: 'POST',
         body: formData,
       });

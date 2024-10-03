@@ -6,10 +6,10 @@ import { useFonts, Pacifico_400Regular } from '@expo-google-fonts/pacifico';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const defaultProfileImage = 'https://i.ibb.co/X76Y1Sd/banner.png';
-const API_URL = 'http://192.168.68.107/getPosts.php'; // URL de l'API pour récupérer les posts
-const LIKED_POSTS_URL = 'http://192.168.68.107/getLikedPosts.php'; // URL de l'API pour récupérer les posts aimés
-const LIKE_URL = 'http://192.168.68.107/likePost.php'; // URL de l'API pour aimer un post
-const UNLIKE_URL = 'http://192.168.68.107/unlikePost.php'; // URL de l'API pour ne plus aimer un post
+const API_URL = 'http://192.168.68.107/api/getPosts.php'; // URL de l'API pour récupérer les posts
+const LIKED_POSTS_URL = 'http://192.168.68.107/api/getLikedPosts.php'; // URL de l'API pour récupérer les posts aimés
+const LIKE_URL = 'http://192.168.68.107/api/likePost.php'; // URL de l'API pour aimer un post
+const UNLIKE_URL = 'http://192.168.68.107/api/unlikePost.php'; // URL de l'API pour ne plus aimer un post
 
 export default function HomeScScreen({ navigation }) {
     const [profileImage, setProfileImage] = useState(defaultProfileImage);
@@ -65,7 +65,7 @@ export default function HomeScScreen({ navigation }) {
         // Charger les posts et vérifier les mises à jour toutes les secondes
         const interval = setInterval(() => {
             loadPostsAndLikes();
-        }, 3500); // 1 seconde
+        }, 1000); // 1 seconde
     
         // Nettoyer l'intervalle à la destruction du composant
         return () => clearInterval(interval);
