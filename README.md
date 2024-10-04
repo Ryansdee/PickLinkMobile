@@ -9,7 +9,7 @@ Mon TFE de l'année passée se basait sur "Comment prévenir et lutter contre le
 
 J'ai quelque buts avec ce projet de web et application mobile:
 
-- Mettre en place un lieu sûr ou les gens peut importe leur sexualité / partie politique / ...
+- Mettre en place un lieu sûr ou les gens peut importe leur sexualité / liberté d'expression sur des sujets (sans discrimination) / ...
 - Essayer de collaborer directement avec l'autorité Belge et Européen
 - Suivre et aider a financer des procès pour harcelement mais pas que
 - Avertir les autorités si une video et photos de nudité non consenti à été divulgé (bien sûr la personne serais directement banni à vie)
@@ -22,7 +22,7 @@ Cette argent vas permettre à:
 - Aide a financer des avocts et les procès pour les victimes qui sont en aide absolue
 ! Aucun argent sera dans mon portefeuille !
 
-J'éspere que ce projet vera le jour et qu'on pourrais enfin aller sur un réseau social sans se faire discriminé ou insulté.
+J'espère que ce projet vera le jour et qu'on pourrais enfin aller sur un réseau social sans se faire discriminé ou insulté.
 
 Et pourquoi PickLink? (Pick =  pique-nique / Link = Lien comme en ligne)
 
